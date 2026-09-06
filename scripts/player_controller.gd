@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 signal interact_requested
 signal talk_requested
+signal kengan_requested
 
 @export var move_speed := 5.2
 @export var mouse_sensitivity := 0.0025
@@ -64,6 +65,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		interact_requested.emit()
 	elif event is InputEventKey and event.pressed and event.keycode == KEY_T:
 		talk_requested.emit()
+	elif event is InputEventKey and event.pressed and event.keycode == KEY_R:
+		kengan_requested.emit()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
