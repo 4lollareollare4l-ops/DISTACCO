@@ -25,6 +25,8 @@ The first build is a first-person rainy forest prototype containing:
 3. Open `project.godot` in Godot.
 4. Press **F6/F5** to run.
 
+A browser build is also generated automatically through GitHub Actions and deployed to GitHub Pages when Pages is enabled for the repository.
+
 ### Controls
 
 - `WASD` — move
